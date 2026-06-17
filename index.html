@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RECA Claims | Utah &amp; Southwest | ClaimWise AI</title>
+  <meta name="description" content="ClaimWise AI helps downwinders, uranium workers, and survivors check their RECA eligibility fast. Free eligibility precheck. No obligation. Utah &amp; Southwest." />
+  <meta property="og:title" content="ClaimWise AI — RECA Eligibility &amp; Claims Support" />
+  <meta property="og:description" content="Free RECA eligibility check for downwinders, uranium workers, and survivors. Serving Utah and the Southwest." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ClaimWise AI / Wasatch Claims Group",
+    "description": "RECA claims administrative support and eligibility precheck services for downwinders, uranium workers, onsite participants, and survivors in Utah and the Southwest.",
+    "url": "https://wasatch-claims-group.web.app",
+    "areaServed": ["Utah", "Nevada", "Arizona", "New Mexico", "Colorado"],
+    "serviceType": "RECA Claims Administrative Support"
+  }
+  </script>
+
+  <style>
+    :root {
+      --black:    #000000;
+      --white:    #FFFFFF;
+      --gray-100: #F5F5F7;
+      --gray-200: #EDEDED;
+      --gray-400: #AAAAAA;
+      --gray-600: #6E7180;
+      --gray-800: #333333;
+      --text:     #111111;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 900; letter-spacing: -2px; line-height: 1.08; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -1.2px; line-height: 1.15; }
+    h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 700; letter-spacing: -0.5px; }
+    p  { font-size: 1.0625rem; line-height: 1.7; color: var(--gray-800); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 16px 36px;
+      border-radius: 100px;
+      font-weight: 700; font-size: 1rem;
+      cursor: pointer; border: none; transition: opacity .2s, transform .15s;
+    }
+    .btn:hover { opacity: .85; transform: translateY(-1px); }
+    .btn-primary { background: var(--black); color: var(--white); }
+    .btn-secondary { background: transparent; color: var(--black); border: 2px solid var(--black); }
+    .btn-white { background: var(--white); color: var(--black); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+    section { padding: 100px 5%; }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-mark {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--black); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.1rem; letter-spacing: -1px;
+    }
+    .nav-logo-text { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-weight: 600; font-size: .9rem; color: var(--gray-600); transition: color .2s; }
+    .nav-links a:hover { color: var(--black); }
+    .nav-cta { padding: 10px 24px; font-size: .9rem; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .mobile-menu { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--gray-200); }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { padding: 16px 5%; font-weight: 600; font-size: 1rem; border-bottom: 1px solid var(--gray-200); color: var(--gray-800); }
+    .mobile-menu .btn { margin: 16px 5%; text-align: center; justify-content: center; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+    #hero { padding: 120px 5% 100px; background: var(--black); color: var(--white); }
+    .hero-inner { max-width: 820px; }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.85);
+      padding: 6px 16px; border-radius: 100px;
+      font-size: .875rem; font-weight: 600; letter-spacing: .5px;
+      margin-bottom: 28px;
+    }
+    #hero h1 { color: var(--white); margin-bottom: 24px; }
+    #hero p { color: rgba(255,255,255,.75); font-size: 1.2rem; max-width: 600px; margin-bottom: 40px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-note { margin-top: 20px; font-size: .875rem; color: rgba(255,255,255,.5); }
+    #trust-bar { padding: 48px 5%; background: var(--gray-100); border-bottom: 1px solid var(--gray-200); }
+    .trust-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px; text-align: center;
+    }
+    .trust-number { font-size: 2.2rem; font-weight: 900; letter-spacing: -1.5px; color: var(--black); }
+    .trust-label { font-size: .85rem; color: var(--gray-600); font-weight: 500; margin-top: 4px; }
+    #qualifies { background: var(--white); }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-header p { max-width: 560px; margin: 16px auto 0; }
+    .qualify-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .qualify-card {
+      border: 1.5px solid var(--gray-200); border-radius: 16px;
+      padding: 36px 28px; transition: border-color .2s, box-shadow .2s;
+    }
+    .qualify-card:hover { border-color: var(--black); box-shadow: 0 8px 32px rgba(0,0,0,.08); }
+    .qualify-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .qualify-icon svg { width: 24px; height: 24px; stroke: var(--black); }
+    .qualify-card h3 { margin-bottom: 12px; }
+    .qualify-card p { font-size: .95rem; }
+    .qualify-card .tag {
+      display: inline-block; background: var(--gray-100); color: var(--gray-600);
+      font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 100px; margin-top: 16px;
+    }
+    #how-it-works { background: var(--gray-100); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; }
+    .step { display: flex; gap: 20px; }
+    .step-num {
+      width: 44px; height: 44px; border-radius: 100px;
+      background: var(--black); color: var(--white);
+      font-weight: 900; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .step-content h3 { margin-bottom: 8px; }
+    .step-content p { font-size: .95rem; }
+    #why { background: var(--white); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+    .why-icon {
+      width: 44px; height: 44px; border-radius: 100px;
+      border: 2px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+    }
+    .why-icon svg { width: 22px; height: 22px; stroke: var(--black); }
+    .why-item h3 { margin-bottom: 8px; font-size: 1.1rem; }
+    .why-item p { font-size: .95rem; }
+    #categories { background: var(--black); color: var(--white); }
+    #categories .section-header h2 { color: var(--white); }
+    #categories .section-header p { color: rgba(255,255,255,.65); }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .cat-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px; padding: 32px 28px; transition: background .2s;
+    }
+    .cat-card:hover { background: rgba(255,255,255,.1); }
+    .cat-card h3 { color: var(--white); margin-bottom: 12px; }
+    .cat-card p { color: rgba(255,255,255,.65); font-size: .95rem; margin-bottom: 16px; }
+    .cat-stat { font-size: .875rem; color: rgba(255,255,255,.4); border-top: 1px solid rgba(255,255,255,.1); padding-top: 16px; }
+    .cat-stat strong { color: rgba(255,255,255,.8); }
+    #faq { background: var(--gray-100); }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 24px 0; display: flex; justify-content: space-between; align-items: center;
+      font-size: 1.05rem; font-weight: 700; color: var(--black); gap: 16px;
+    }
+    .faq-q svg { width: 20px; height: 20px; stroke: var(--gray-600); flex-shrink: 0; transition: transform .2s; }
+    .faq-q.open svg { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 0 24px; font-size: .95rem; color: var(--gray-800); line-height: 1.75; }
+    .faq-a.open { display: block; }
+    #contact { background: var(--white); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1100px; margin: 0 auto; }
+    .contact-left h2 { margin-bottom: 20px; }
+    .contact-left p { margin-bottom: 32px; }
+    .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: .95rem; }
+    .contact-detail svg { width: 20px; height: 20px; stroke: var(--gray-600); flex-shrink: 0; }
+    form { display: flex; flex-direction: column; gap: 16px; }
+    .form-group label { display: block; font-size: .875rem; font-weight: 600; margin-bottom: 6px; color: var(--gray-600); }
+    .form-group input, .form-group select {
+      width: 100%; padding: 14px 16px;
+      border: 1.5px solid var(--gray-200); border-radius: 12px;
+      font-size: 1rem; font-family: inherit; background: var(--gray-100);
+      transition: border-color .2s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none; border-color: var(--black); background: var(--white);
+    }
+    .hp-field { display: none; }
+    .form-note { font-size: .8rem; color: var(--gray-600); line-height: 1.5; }
+    .revision-note {
+      background: var(--gray-100); border-radius: 12px; padding: 20px;
+      font-size: .875rem; color: var(--gray-600); margin-top: 24px; line-height: 1.6;
+    }
+    .form-success { display: none; background: var(--gray-100); border-radius: 12px; padding: 24px; text-align: center; }
+    .form-success h3 { margin-bottom: 8px; }
+    @media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 48px; } }
+    footer { background: var(--black); color: var(--white); padding: 64px 5% 40px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+    .footer-brand { max-width: 320px; }
+    .footer-brand p { color: rgba(255,255,255,.5); font-size: .875rem; line-height: 1.7; margin-top: 12px; }
+    .footer-links h4 { font-size: .875rem; font-weight: 700; letter-spacing: .5px; color: rgba(255,255,255,.5); text-transform: uppercase; margin-bottom: 16px; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: .9rem; color: rgba(255,255,255,.65); transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1); padding-top: 28px;
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: .825rem; color: rgba(255,255,255,.35); }
+    .disclaimer { max-width: 1100px; margin: 0 auto; padding-top: 20px; font-size: .775rem; color: rgba(255,255,255,.25); line-height: 1.6; }
+    .sticky-cta {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      background: var(--black); padding: 14px 5%;
+      gap: 12px; border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .sticky-cta .btn { flex: 1; justify-content: center; font-size: .9rem; padding: 14px 16px; }
+    @media (min-width: 769px) { .sticky-cta { display: none !important; } }
+    @media (max-width: 768px) { .sticky-cta { display: flex; } body { padding-bottom: 80px; } }
+    .skip-link {
+      position: absolute; top: -40px; left: 0; z-index: 999;
+      background: var(--black); color: var(--white);
+      padding: 8px 16px; border-radius: 0 0 8px 0; font-weight: 700; transition: top .2s;
+    }
+    .skip-link:focus { top: 0; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a href="#contact" class="skip-link">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="ClaimWise AI home">
+        <div class="nav-logo-mark" aria-hidden="true">CW</div>
+        <span class="nav-logo-text">ClaimWise AI</span>
+      </a>
+      <div class="nav-links" role="menubar">
+        <a href="#qualifies" role="menuitem">Who Qualifies</a>
+        <a href="#how-it-works" role="menuitem">How It Works</a>
+        <a href="#categories" role="menuitem">Claim Types</a>
+        <a href="#faq" role="menuitem">FAQ</a>
+        <a href="#contact" class="btn btn-primary nav-cta" role="menuitem">Check Eligibility</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" role="menu">
+      <a href="#qualifies" onclick="closeMenu()" role="menuitem">Who Qualifies</a>
+      <a href="#how-it-works" onclick="closeMenu()" role="menuitem">How It Works</a>
+      <a href="#categories" onclick="closeMenu()" role="menuitem">Claim Types</a>
+      <a href="#faq" onclick="closeMenu()" role="menuitem">FAQ</a>
+      <a href="#contact" class="btn btn-primary" onclick="closeMenu()" role="menuitem">Check Eligibility</a>
+    </div>
+  </nav>
+
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <div class="hero-label" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        RECA Claims Administrative Support
+      </div>
+      <h1 id="hero-heading">Find Out If You Qualify for RECA Compensation</h1>
+      <p>Downwinders, uranium workers, and survivors across Utah and the Southwest may be entitled to federal compensation. Our free eligibility precheck takes minutes — no legal fees, no obligation.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+          Check My Eligibility
+        </a>
+        <a href="#how-it-works" class="btn" style="background:transparent;border:2px solid rgba(255,255,255,.4);color:rgba(255,255,255,.8);">How It Works</a>
+      </div>
+      <p class="hero-note">Free precheck. No SSN or medical records required at this stage.</p>
+    </div>
+  </section>
+
+  <div id="trust-bar" aria-label="RECA program statistics">
+    <div class="trust-grid">
+      <div><div class="trust-number">36,453</div><div class="trust-label">PL 119-21 Claims Filed<br><span style="font-size:.75rem;color:#aaa">DOJ Awards Data, June 2026</span></div></div>
+      <div><div class="trust-number">~38,500</div><div class="trust-label">Projected Unfiled Claims<br><span style="font-size:.75rem;color:#aaa">CBO/DOJ FY2027 Estimate</span></div></div>
+      <div><div class="trust-number">$2,000</div><div class="trust-label">Per Approved Claimant<br><span style="font-size:.75rem;color:#aaa">Compensation upon approval</span></div></div>
+      <div><div class="trust-number">75,000</div><div class="trust-label">Reauthorization Claims<br><span style="font-size:.75rem;color:#aaa">DOJ Planning Estimate FY2027</span></div></div>
+    </div>
+  </div>
+
+  <section id="qualifies" aria-labelledby="qualifies-heading">
+    <div class="section-header">
+      <h2 id="qualifies-heading">Who May Qualify</h2>
+      <p>The Radiation Exposure Compensation Act (RECA) covers several categories of people exposed to radiation from nuclear testing and uranium mining.</p>
+    </div>
+    <div class="qualify-grid">
+      <div class="qualify-card">
+        <div class="qualify-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Downwinders</h3>
+        <p>People who lived in designated Utah, Nevada, or Arizona counties during above-ground nuclear tests from 1951–1962 and later developed a covered illness.</p>
+        <span class="tag">14,092 pending downwinder claims</span>
+      </div>
+      <div class="qualify-card">
+        <div class="qualify-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Uranium Workers</h3>
+        <p>Miners, millers, and ore transporters who worked in the uranium industry and later developed a covered condition like lung cancer or pulmonary fibrosis.</p>
+        <span class="tag">Uranium mining states covered</span>
+      </div>
+      <div class="qualify-card">
+        <div class="qualify-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Onsite Participants</h3>
+        <p>Military personnel, civilian employees, and contractors who were present at atmospheric nuclear tests or participated in post-test operations.</p>
+        <span class="tag">Active duty &amp; civilian covered</span>
+      </div>
+      <div class="qualify-card">
+        <div class="qualify-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Survivors &amp; Families</h3>
+        <p>Surviving spouses, children, and other relatives of deceased individuals who would have qualified under RECA may be eligible to file on their behalf.</p>
+        <span class="tag">Survivor claims accepted</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="how-heading">How It Works</h2>
+        <p>Three steps from your first question to a supported claim file.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-content">
+            <h3>Free Eligibility Precheck</h3>
+            <p>Answer a few questions about your exposure location, time period, and health history. Our AI-powered precheck identifies the most likely RECA category — no SSN or medical records at this stage.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-content">
+            <h3>Document Guidance</h3>
+            <p>We generate a personalized missing-document checklist and connect you with the right Utah Archives and records resources for residence proof, employment records, and medical diagnoses.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-content">
+            <h3>Supported File Preparation</h3>
+            <p>Our team reviews your case file before submission, routes complex legal questions to qualified attorneys, and tracks your claim through DOJ processing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="why-heading">Why ClaimWise AI</h2>
+        <p>We built the system other RECA firms use to help claimants — then made it available to anyone who qualifies.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>AI-Powered Precheck</h3>
+          <p>Our RECA eligibility model maps every exposure county, category requirement, and covered illness to surface your most likely path — in minutes, not weeks.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Source-Backed Only</h3>
+          <p>Every stat, every eligibility criterion, every claim requirement is sourced directly from DOJ and CBO data. We never make claims we can't cite.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+          <h3>No Upfront Fees</h3>
+          <p>The eligibility precheck and initial document guidance are completely free. Our administrative support fee is tied to approved claims — we succeed when you do.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Human Review Always</h3>
+          <p>AI handles eligibility screening and document checklists. Licensed professionals review every file before submission. You always talk to a person when it matters.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Fast Document Routing</h3>
+          <p>We know exactly which Utah Archives, DOJ offices, and VA records centers hold the documents RECA requires. We route you directly — no dead ends.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Utah &amp; Southwest Specialists</h3>
+          <p>Most RECA claimants are in Utah, Nevada, and Arizona. We've built our system around the specific counties, archives, and records sources that matter most here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" aria-labelledby="categories-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="categories-heading">RECA Claim Categories</h2>
+        <p>PL 119-21 and legacy RECA legislation cover multiple exposure types. Find yours below.</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <h3>Downwinder Claims</h3>
+          <p>For individuals who resided in specific counties in Utah, Nevada, and Arizona during atmospheric nuclear testing (1951–1962) and developed a covered illness such as leukemia, thyroid cancer, or lung cancer.</p>
+          <div class="cat-stat"><strong>16,492</strong> downwinder claims filed &nbsp;|&nbsp; <strong>14,092</strong> pending<br><span style="font-size:.75rem;">DOJ June 2026</span></div>
+        </div>
+        <div class="cat-card">
+          <h3>Uranium Worker Claims</h3>
+          <p>Miners, millers, and ore transporters who worked with uranium and developed covered diseases including lung cancer, pulmonary fibrosis, renal cancer, and other conditions listed under RECA statute.</p>
+          <div class="cat-stat"><strong>Multiple states</strong> covered &nbsp;|&nbsp; Exposure 1942–1971+</div>
+        </div>
+        <div class="cat-card">
+          <h3>Onsite Participant Claims</h3>
+          <p>Military and civilian personnel present at atmospheric nuclear tests, underground tests (post-1962), or post-test operations including Trinity, Operation Crossroads, and Nevada Test Site programs.</p>
+          <div class="cat-stat"><strong>Active duty</strong>, reserves, &amp; civilian contractors</div>
+        </div>
+        <div class="cat-card">
+          <h3>Legacy Claims (Pre-July 2025)</h3>
+          <p>Claims filed under the legacy RECA statute before the July 3, 2025 reauthorization deadline. PL 119-21 may provide a new path for previously denied claims.</p>
+          <div class="cat-stat"><strong>57,081</strong> legacy filed &nbsp;|&nbsp; <strong>42,596</strong> approved<br><span style="font-size:.75rem;">DOJ June 2026</span></div>
+        </div>
+        <div class="cat-card">
+          <h3>Survivor &amp; Family Claims</h3>
+          <p>Surviving spouses, children, and parents of deceased individuals who would have qualified under RECA may file claims on behalf of their loved ones.</p>
+          <div class="cat-stat"><strong>Survivor relationship proof</strong> required</div>
+        </div>
+        <div class="cat-card">
+          <h3>Manhattan Project Claims</h3>
+          <p>Workers and community members near Manhattan Project waste sites may qualify under expanded PL 119-21 geographic criteria.</p>
+          <div class="cat-stat"><strong>~38,547</strong> projected unfiled claims remain<br><span style="font-size:.75rem;">CBO/DOJ FY2027 estimate</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header"><h2 id="faq-heading">Frequently Asked Questions</h2></div>
+      <div class="faq-list" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is ClaimWise AI a law firm?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">No. ClaimWise AI provides administrative support and eligibility screening. We are not a law firm and do not provide legal advice. For complex legal questions, we connect you with licensed RECA attorneys in our network.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Does the free eligibility check require my Social Security number or medical records?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">No. The initial precheck only asks about your exposure location, time period, and general category of illness. We never request SSNs or medical records until a secure upload portal is set up for your file.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What does ClaimWise AI charge?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">The eligibility precheck and initial document guidance are free. Our administrative support fee structure is disclosed in full at the time of engagement — before you commit to anything.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">I filed a claim years ago and was denied. Can I file again under PL 119-21?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Possibly. PL 119-21 expanded eligibility criteria, geographic coverage, and disease categories. Some previously denied claims may qualify under the new statute. We recommend a fresh eligibility precheck to evaluate your options.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is ClaimWise AI affiliated with the government?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">No. ClaimWise AI is a private administrative support service. We are not affiliated with the DOJ, DOE, VA, or any other government agency. Claims are processed by the Department of Justice's Civil Division under the RECA statute.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">My loved one passed away. Can I still file on their behalf?<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a">Yes. Surviving spouses, children, and parents may file survivor claims under RECA. Document requirements differ from original-claimant filings. Start with our free precheck to see what applies to your situation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2 id="contact-heading">Start Your Free Eligibility Precheck</h2>
+        <p>Tell us a little about your situation. We'll reach out within one business day to walk through your options — no obligation, no cost.</p>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.5 3.39 2 2 0 0 1 3.36 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.45a16 16 0 0 0 7.64 7.64l1.61-1.61a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 24 16z"/></svg>
+          <span>Serving: Utah, Nevada, Arizona, New Mexico, Colorado</span>
+        </div>
+        <div class="revision-note">Your site includes up to 10 revision rounds. Request as many individual changes per round as you'd like — each round counts as one revision. Submit changes via the form and we'll update within 24 hours.</div>
+      </div>
+      <div class="contact-right">
+        <form id="eligibility-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
+          <div class="hp-field" aria-hidden="true"><label for="hp-website">Website</label><input type="text" id="hp-website" name="_gotcha" tabindex="-1" autocomplete="off" /></div>
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="First and last name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Best Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="(801) 555-0100" required autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="claim-type">Claim Category</label>
+            <select id="claim-type" name="claim_type">
+              <option value="">Select the closest match...</option>
+              <option value="downwinder">Downwinder (lived in exposure area)</option>
+              <option value="uranium-worker">Uranium Worker (miner/miller/transporter)</option>
+              <option value="onsite">Onsite Participant (military/civilian test)</option>
+              <option value="survivor">Survivor / Filing on Behalf of Family</option>
+              <option value="legacy-resubmit">Previously Filed — Want to Resubmit</option>
+              <option value="not-sure">Not Sure — Need Guidance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state">State of Exposure</label>
+            <select id="state" name="state">
+              <option value="">Select state...</option>
+              <option value="UT">Utah</option>
+              <option value="NV">Nevada</option>
+              <option value="AZ">Arizona</option>
+              <option value="NM">New Mexico</option>
+              <option value="CO">Colorado</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send My Eligibility Request
+          </button>
+          <p class="form-note">By submitting, you consent to being contacted by ClaimWise AI about your RECA eligibility. We do not share your information. You may opt out at any time.</p>
+        </form>
+        <div class="form-success" id="form-success" aria-live="polite">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="margin:0 auto 16px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Request Received</h3>
+          <p>We'll reach out within one business day to walk through your eligibility options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo-mark" aria-hidden="true" style="background:white;color:black;">CW</div>
+          <p>ClaimWise AI helps RECA claimants check their eligibility and prepare their files for DOJ submission. Administrative support — not legal services.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#qualifies">Who Qualifies</a></li>
+            <li><a href="#categories">Claim Types</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Free Eligibility Check</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-links" aria-label="Company navigation">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why">Why ClaimWise AI</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-links">
+          <h4>Serving</h4>
+          <ul>
+            <li><a href="#contact">Utah</a></li><li><a href="#contact">Nevada</a></li>
+            <li><a href="#contact">Arizona</a></li><li><a href="#contact">New Mexico</a></li>
+            <li><a href="#contact">Colorado</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ClaimWise AI / Wasatch Claims Group. All rights reserved.</p>
+        <p>Not a law firm. Not affiliated with any government agency.</p>
+      </div>
+      <p class="disclaimer">Statistical data sourced from DOJ RECA Awards Data (updated June 11, 2026) and CBO/DOJ FY2027 planning estimates. ClaimWise AI does not guarantee claim approval or specific compensation amounts. All claims are processed and adjudicated by the U.S. Department of Justice Civil Division under the Radiation Exposure Compensation Act (PL 119-21 and legacy statute). This site does not constitute legal advice.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" aria-label="Quick actions">
+    <a href="tel:+18015550100" class="btn" style="flex:1;justify-content:center;background:transparent;border:2px solid rgba(255,255,255,.3);color:white;font-size:.9rem;padding:14px 16px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.5 3.39 2 2 0 0 1 3.36 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.45a16 16 0 0 0 7.64 7.64l1.61-1.61a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 24 16z"/></svg>
+      Call
+    </a>
+    <a href="#contact" class="btn btn-white" style="flex:1;justify-content:center;font-size:.9rem;padding:14px 16px;">Check Eligibility</a>
+  </div>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    }
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.querySelector('.nav-hamburger').setAttribute('aria-expanded', 'false');
+    }
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+    }
+    const form = document.getElementById('eligibility-form');
+    const success = document.getElementById('form-success');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const hp = form.querySelector('input[name="_gotcha"]');
+        if (hp && hp.value) return;
+        const data = new FormData(form);
+        fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+          .then(r => {
+            if (r.ok) { form.style.display = 'none'; success.style.display = 'block'; }
+            else { alert('There was an issue submitting. Please try again.'); }
+          }).catch(() => { alert('Network issue. Please try again.'); });
+      });
+    }
+  </script>
+</body>
+</html>
